@@ -5,3 +5,4 @@ from .models import Books
 
 # Register your models here.
 "register," 'admin.ModelAdmin'
+"search_fields", "title"

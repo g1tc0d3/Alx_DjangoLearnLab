@@ -2,17 +2,17 @@ from django.db import models
 
 # Create your models here.
 
-class Author ():
+class Author (models.Model):
     name = models.CharField()
 
-class Book ():
+class Book (models.Model):
     title = models.CharField()
     author = models.ForeignKey(Author)
-    
-class Library ():
+
+class Library (models.Model):
     name = models.CharField()
     books = models.ManyToManyField(Book)
 
-class Librarian ():
+class Librarian (models.Model):
     name = models.CharField
     library = models.ManyToManyField(Library)

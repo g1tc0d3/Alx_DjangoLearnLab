@@ -1,4 +1,4 @@
-from LibraryProject import bookshelf
+from LibraryProject import LibraryProject
 from models import Author
 
 
@@ -7,4 +7,5 @@ books.all()
 
 Author.objects.get(name=author_name)
 objects.filter(author=author)
-#objects.filter(author=author )
+
+Librarian.objects.get(library=)

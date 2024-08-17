@@ -3,7 +3,9 @@ from django.db import models
 # Create your models here.
 
 class Author (models.Model):
-    name = models.CharField()
+    self.name = models.CharField()
+    
+    
 
 class Book (models.Model):
     title = models.CharField()

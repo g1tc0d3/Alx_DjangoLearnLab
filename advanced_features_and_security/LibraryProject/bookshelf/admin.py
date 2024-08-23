@@ -7,4 +7,4 @@ from .models import CustomUser, CustomUserManager, CustomUserAdmin
 # Register your models here.
 "register," 'admin.ModelAdmin'
 "search_fields", "title"
-admin.site.register(CustomUser, CustomUserAdmin, CustomUserManager)
+"admin.site.register(CustomUser, CustomUserAdmin, CustomUserManager)"

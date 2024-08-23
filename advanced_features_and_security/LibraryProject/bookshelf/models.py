@@ -21,3 +21,6 @@ class CustomUserManager(BaseUserManager):
     def create_superuser():
         pass
 
+class CustomUserAdmin():
+    pass
+

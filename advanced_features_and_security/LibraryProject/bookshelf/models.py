@@ -4,10 +4,12 @@ from django.contrib.auth.models import BaseUserManager
 
 
 # Create your models here.
-class Books ():
+class Books (models.Model):
     title = models.CharField (max_length= 200)
     author = models.CharField (max_length= 100)
     publication_year = models.IntegerField ()
+    can_create = models.CharField
+    can_delete = models.CASCADE
     
 
 class CustomUser(AbstractUser):

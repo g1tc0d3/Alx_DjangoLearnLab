@@ -10,7 +10,7 @@ class CustomBookListView(generics.ListAPIView):
     serializer_class = BookSerializer
     queryset = Book.objects.all()
     filter_backends = [filters.OrderingFilter], [filters.SearchFilter]
-    serach_fields = ['title', 'author']
+    serach_fields = ['title', 'author', 'publication_year']
     
 
 class CustomBookDetailView(generics.DetailAPIView):

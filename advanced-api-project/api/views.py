@@ -12,7 +12,7 @@ class CustomBookDetailView(generics.DetailAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
-class CustomCreateView(generics.CreateAPIView):
+class CustomBookCreateView(generics.CreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 

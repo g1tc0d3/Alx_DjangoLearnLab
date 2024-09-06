@@ -3,11 +3,11 @@ from rest_framework.routers import DefaultRouter
 from .views import CustomBookListView, CustomBookDetailView, CustomBookCreateView, CustomBookUpdateView, CustomBookDeleteView
 
 router = DefaultRouter()
-router.register (r'Books', CustomBookListView)
-router.register (r'Books', CustomBookDetailView)
-router.register (r'Books/create', CustomBookCreateView)
-router.register (r'Books/update', CustomBookUpdateView)
-router.register (r'Books/delete', CustomBookDeleteView)
+router.register (r'books', CustomBookListView)
+router.register (r'books', CustomBookDetailView)
+router.register (r'books/create', CustomBookCreateView)
+router.register (r'books/update', CustomBookUpdateView)
+router.register (r'books/delete', CustomBookDeleteView)
 
 urlpatterns = {
     path('api/', include(router.urls)),

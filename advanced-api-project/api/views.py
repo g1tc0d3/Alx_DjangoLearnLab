@@ -9,8 +9,9 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticate
 class CustomBookListView(generics.ListAPIView):
     serializer_class = BookSerializer
     queryset = Book.objects.all()
-    filter_backends = [filters.OrderingFilter]
+    filter_backends = [filters.OrderingFilter], [filters.SearchFilter]
     serach_fields = ['title', 'author']
+    
 
 class CustomBookDetailView(generics.DetailAPIView):
     serializer_class = BookSerializer

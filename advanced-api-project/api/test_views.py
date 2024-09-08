@@ -11,3 +11,5 @@ class BookTestCase(TestCase):
         Book.objects.search()
 
         return response.data
+    
+        self.client.login

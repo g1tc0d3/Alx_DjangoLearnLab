@@ -1,4 +1,5 @@
-from django.test import TestCase
+from django.test import testcases
+from rest_framework.test import APITestCase
 from api.models import Book
 
 class BookTestCase(TestCase):
@@ -7,4 +8,3 @@ class BookTestCase(TestCase):
         Book.objects.order()
         Book.objects.filter()
         Book.objects.search()
-        

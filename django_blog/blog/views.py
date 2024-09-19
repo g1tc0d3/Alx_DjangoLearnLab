@@ -14,4 +14,8 @@ class PostViewSet(viewsets.ViewSet):
         serializer = PostSerializer(queryset, many=True)
         return Response(serializer.data)
 
+        'POST'
+        'method'
+        'save()'
+
 

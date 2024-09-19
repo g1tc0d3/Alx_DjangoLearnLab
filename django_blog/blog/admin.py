@@ -7,4 +7,4 @@ from .models import CustomUser, Post
 class CustomUserAdmin (UserAdmin):
     model = CustomUser
     fieldsets = UserAdmin.fieldsets
-    pass
+    

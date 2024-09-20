@@ -16,7 +16,9 @@ urlpatterns = [
     'register/',
     'profile/'
     'Post',
-    
+    "comment/<int:pk>/update/",
+    "post/<int:pk>/comments/new/",
+    "comment/<int:pk>/delete/"
 ]
 
 

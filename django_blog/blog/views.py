@@ -9,7 +9,7 @@ from django.http import HttpResponse
 
 class PostViewSet(viewsets.ViewSet):
 
-    def list(self, request):
+    def listView(self, request):
         queryset = Post.objects.all()
         serializer = PostSerializer(queryset, many=True)
         return Response(serializer.data)

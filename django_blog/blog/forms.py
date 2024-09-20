@@ -1,3 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from models import CustomUser, Post
+
+class CommentForm(UserCreationForm):
+    pass 

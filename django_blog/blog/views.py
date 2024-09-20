@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from .models import Post
-from .serializers import PostSerializer
+from .serializers import PostSerializer, CommentSerializer
 from django.http import HttpResponse
 
 class PostViewSet(viewsets.ViewSet):
@@ -37,3 +37,25 @@ class PostViewSet(viewsets.ViewSet):
         serializer = PostSerializer(queryset, many=True)
         return Response(serializer.data)
 
+class CommentViewSet(viewsets.ViewSet):
+
+    def CreateView(self, request):
+        queryset = Post.objects.all()
+        serializer = CommentSerializer(queryset, many=True)
+        return Response(serializer.data)
+     
+    def ReadView(self, request):
+        queryset = Post.objects.all()
+        serializer = CommentSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
+    def UpdateView(self, request):
+        queryset = Post.objects.all()
+        serializer = CommentSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
+    def DeleteView(self, request):
+        queryset = Post.objects.all()
+        serializer = CommentSerializer(queryset, many=True)
+        return Response(serializer.data)
+    

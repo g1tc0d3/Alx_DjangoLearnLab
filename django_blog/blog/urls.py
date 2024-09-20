@@ -16,6 +16,7 @@ urlpatterns = [
     'register/',
     'profile/'
     'Post',
+    
 ]
 
 

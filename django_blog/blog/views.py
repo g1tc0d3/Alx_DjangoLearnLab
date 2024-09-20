@@ -39,23 +39,26 @@ class PostViewSet(viewsets.ViewSet):
 
 class CommentViewSet(viewsets.ViewSet):
 
-    def CreateView(self, request):
+    def CommentCreateView(self, request):
         queryset = Post.objects.all()
         serializer = CommentSerializer(queryset, many=True)
         return Response(serializer.data)
      
-    def ReadView(self, request):
+    def CommentReadView(self, request):
         queryset = Post.objects.all()
         serializer = CommentSerializer(queryset, many=True)
         return Response(serializer.data)
     
-    def UpdateView(self, request):
+    def CommentUpdateView(self, request):
         queryset = Post.objects.all()
         serializer = CommentSerializer(queryset, many=True)
         return Response(serializer.data)
     
-    def DeleteView(self, request):
+    def CommentDeleteView(self, request):
         queryset = Post.objects.all()
         serializer = CommentSerializer(queryset, many=True)
         return Response(serializer.data)
-    
+    def LoginRequiredMixin():
+        pass
+    def UserPassesTestMixin():
+        pass

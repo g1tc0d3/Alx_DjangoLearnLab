@@ -11,10 +11,10 @@ class Post(models.Model):
     published_date=models.DateTimeField(auto_now_add=True)
     # author=models.ForeignKey(on_delete=models.CASCADE)
 
-class Comment (models.Model):
+class Comment(models.Model):
     post = models.ForeignKey(Post)
     author = models.ForeignKey(User)
     content = models.TextField
     created_at = models.DateTimeField(auto_created=True)
     updated_at = models.DateTimeField(auto_now_add=True)
-    
+

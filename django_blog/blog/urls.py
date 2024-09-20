@@ -4,11 +4,18 @@ from django.urls import path
 
 
 router = DefaultRouter
-router.register('login/', 'register/', 'profile/'
-    'Post', PostViewSet, basename= 'Post',
+router.register( PostViewSet, basename= 'Post',
     
     )
     
-urlpatterns = router.urls 
+urlpatterns = [
+    "post/<int:pk>/delete/", 
+    "post/<int:pk>/update/", 
+    "post/new/"
+    'login/',
+    'register/',
+    'profile/'
+    'Post',
+]
 
 
